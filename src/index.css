@@ -1,0 +1,74 @@
+:root {
+	--ob_green: #026e38;
+	--ob_pink: #f494a4;
+	--ob_yellow: #fde17e;
+	--ob_skin: #efbfaf;
+	--ob_blue: #05377f;
+	--ob_lightBlue: #57c4e5;
+	--ob_orange: #e89714;
+	--ob_black: #000;
+	--ob_lightGreen: #97db4f;
+	--ob_brown: #8c4843;
+	--ob_gray: #d0cccc;
+	--ob_font_color: #00000080;
+	--ob_main_logo_color: #ac541e;
+}
+
+@font-face {
+	font-family: 'Roboto';
+	src: local('Roboto'), url(./assets/fonts/roboto/Roboto-Regular.ttf) format('truetype');
+}
+
+body {
+	margin: 0;
+	font-family: 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif !important;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+hr {
+	margin: 0 7% 0 7%;
+}
+
+.react-icons {
+	vertical-align: middle;
+  }
+
+@media only screen and (max-width: 1280px) {
+
+	h3 {
+		font-size: 1.4rem !important;
+	}
+	.hid-1280 {
+		visibility: hidden;
+	}
+	.no-display-1280 {
+		display: none;
+	}
+}
+
+@media only screen and (max-width: 780px) {
+
+	h3 {
+		font-size: 1.2rem !important;
+	}
+	.hid-780 {
+		visibility: hidden;
+	}
+	.no-display-780 {
+		display: none;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+
+	h3 {
+		font-size: 1rem !important;
+	}
+	.hid-600 {
+		visibility: hidden;
+	}
+	.no-display-600 {
+		display: none;
+	}
+}

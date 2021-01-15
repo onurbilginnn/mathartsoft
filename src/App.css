@@ -1,0 +1,30 @@
+.App {
+  text-align: center;
+}
+
+.react-icons {
+  margin-right: .6rem;
+  font-size : 20px;
+}
+
+.text-nextTo-icon {
+  margin: auto;
+}
+
+.excel-btn {
+  background-color: var(--ob_green) !important;
+  border: 1px solid var(--ob_green) !important;
+}
+
+.excel-btn:hover {
+  background-color: var(--white) !important;
+  border: 1px solid var(--white) !important;
+  color: var(--ob_green) !important;
+}
+
+.hoverMeText {
+  font-size: .8rem;
+  color: var(--ob_font_color);
+  text-align: center;
+}
+

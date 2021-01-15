@@ -1,0 +1,18 @@
+.AboutContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+}
+
+.AboutTextContainer {
+    text-align: center;
+    line-height: 1.7rem;
+}
+  
+  @media only screen and (max-width: 780px) {
+        .AboutContainer {
+            flex-direction: column-reverse;
+            
+        }
+  }

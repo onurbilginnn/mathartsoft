@@ -1,0 +1,49 @@
+.copyrightContainer {
+    margin-left: 50px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.linkContainers{
+    display: flex;
+    flex-direction: column;
+}
+
+.linkContainers a {
+    margin-bottom: 5px;
+    color: black;
+}
+
+.linkContainers h6 {
+    margin-bottom: 20px;
+    font-weight: 700;
+    color: var(--ob_font_color);
+}
+
+.companyContainer {
+    text-align: center;
+}
+
+.brandText {
+    font-size: small;
+    color: var(--ob_font_color);
+}
+
+.obSolutionsLogo {
+    width: 150px;
+}
+
+@media only screen and (max-width: 780px) {
+    .obSolutionsLogo {
+        width: 135px;
+    }
+  }
+
+@media only screen and (max-width: 600px) {
+    .brandText {
+        font-size: x-small;
+    }
+    .obSolutionsLogo {
+        width: 120px;
+    }
+  }

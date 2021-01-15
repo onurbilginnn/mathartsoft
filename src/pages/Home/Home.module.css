@@ -1,0 +1,114 @@
+.WelcomeContainer {
+    background-color: var(--ob_skin);
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    background-image: url(../../assets/SVGs/mainLogo.svg);
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: top 80px left ;
+}
+
+.TitleText {
+    color: var(--ob_main_logo_color);
+}
+
+.WelcomeText {
+    color: var(--ob_font_color);
+    font-size: 1.8rem;
+    margin-bottom: 0;
+}
+
+.ServicesBtn{   
+    background-color: var(--ob_main_logo_color) !important;
+    border-color: var(--ob_main_logo_color) !important;
+    color: var(--white) !important;
+    margin-right: 50px;
+}
+
+.PluginsBtn{
+    background-color: transparent !important;
+    border-color: transparent !important;
+    color: var(--ob_main_logo_color)  !important;
+}
+
+.ServicesBtn:hover {
+    background-color: var(--white) !important;
+    border-color: var(--white) !important;
+    color: var(--ob_main_logo_color)  !important;
+
+}
+
+.PluginsBtn:hover {
+    color: var(--white)  !important;
+}
+
+.FeaturesContainer {
+    text-align: left;
+    display: flex;
+    align-items: center;
+}
+
+.SnailSVGContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.SnailSVGTextContainerHidden {
+    margin: auto 0 auto 0;
+    font-size: 0;
+    -webkit-transition: font-size .5s ease-in; /* Safari */
+    transition: font-size .5s ease-in;
+}
+
+
+.SnailSVGTextContainerVisible {
+    margin: auto 0 auto 0;
+    font-size: normal;
+    -webkit-transition: font-size .5s ease-in; /* Safari */
+    transition: font-size .5s ease-in;
+}
+
+@media only screen and (max-width: 1280px) {
+    .WelcomeContainer {
+        background-image: none;
+         height: 300px;
+    }
+    .TitleText {
+        font-size: 1.8rem;
+    }    
+    .WelcomeText {
+        color: var(--ob_font_color);
+        font-size: 1.4rem;
+    }
+    .SnailSVGContainer {
+      margin: auto;
+    }
+  }
+
+  @media only screen and (max-width: 780px) {
+  
+    .TitleText {
+        font-size: 1.4rem;
+    }    
+    .WelcomeText {
+        font-size: 1.2rem;
+    }
+   
+  }
+
+  @media only screen and (max-width: 600px) {
+    .WelcomeContainer {
+    height: 200px;
+    }
+    .TitleText {
+        font-size: 1.2rem;
+    }    
+    .WelcomeText {
+        color: var(--ob_font_color);
+        font-size: .9rem;
+    }
+  }

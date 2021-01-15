@@ -1,0 +1,17 @@
+.PianoSVGContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 50px;
+}
+.OnOffBtnContainer {
+    display: flex;
+    align-items: center; 
+}
+.SVGContainer {
+    padding: 20px;
+    margin-top: 30px;
+    border-radius: 5%;
+    border: var(--ob_gray) 1px solid;
+}

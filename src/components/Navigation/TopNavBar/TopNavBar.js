@@ -24,13 +24,17 @@ const TopNavBar = (props) => {
   <Navbar.Collapse id="basic-navbar-nav">
     <Nav >
       <NavigationItem classes="mt-2 mr-3"  link="/" exact >Home</NavigationItem>
-      <NavigationItem classes="mt-2 mr-3" link="/about">About</NavigationItem>
-      <NavigationItem classes="mt-2 mr-3" link="/plugins">Plugins</NavigationItem>
-      <NavDropdown className="mr-3" title="Services" id="basic-nav-dropdown">
-        <NavigationItem classes="ml-4" link="/finance">Finance</NavigationItem>
-        <NavigationItem classes="ml-4" link="/inventory">Inventory</NavigationItem>
+      <NavDropdown className="mr-3" title="Math" id="basic-nav-dropdown">
+        <NavigationItem classes="ml-4" link="/math/prime">Prime Numbers</NavigationItem>
         <NavDropdown.Divider />
-        <NavigationItem classes="ml-4"  link="/services">All Services</NavigationItem>
+        <NavigationItem classes="ml-4"  link="/math">Math</NavigationItem>
+      </NavDropdown>
+      <NavDropdown className="mr-3" title="Art" id="basic-nav-dropdown">
+        <NavigationItem classes="ml-4" link="/art/digital">Digital Drawings</NavigationItem>
+        <NavigationItem classes="ml-4" link="/art/hand">Hand Drawings</NavigationItem>
+        <NavigationItem classes="ml-4"  link="/art/hand-to-digital">Hand to Digital</NavigationItem>
+        <NavDropdown.Divider />
+        <NavigationItem classes="ml-4"  link="/art">Art</NavigationItem>
       </NavDropdown>
       <NavigationItem classes="mt-2" link="/contact">Contact</NavigationItem>
 

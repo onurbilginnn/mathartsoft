@@ -2,15 +2,15 @@ import React from 'react';
 
 import HumanMindSVG from '../../components/SVGs/HumanMindSVG';
 
-import styles from './Services.module.css';
+import styles from './Art.module.css';
 
-const Services = props => {
-
+const Art = props => {
+ 
     return (
-        <div className={styles.ServicesPageContainer} >
+        <div className={styles.ArtContainer} >
             <HumanMindSVG />
         </div>
     );
-};
+}
 
-export default Services;
+export default Art;

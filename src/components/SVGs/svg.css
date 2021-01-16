@@ -42,7 +42,7 @@
 
 @media only screen and (max-width: 600px) {
   .flowersSVG {
-    height: 80mm;
+    height: 60mm;
   }
 }
 
@@ -146,7 +146,6 @@
 
 .snailSVG {
   height: 150mm;
-  width: 255mm;
   padding: 20px;
 }
 .snail_shell{
@@ -244,8 +243,7 @@
 
 @media only screen and (max-width: 1280px) {
   .snailSVG {
-    width: 200mm;
-    height: auto;
+    height: 120mm;
   }
   .hoverable.snail_head, .hoverable.snail_tail, 
   .hoverable.snail_tentacle, .hoverable.snail_shell {
@@ -274,14 +272,8 @@
 
 @media only screen and (max-width: 780px) {
   .snailSVG {
-    width: 150mm;
-    height: auto;
+    height: 100mm;    
   }
-
-.snail_tail_text_detailed, .snail_tentacle_text_detailed,
-.snail_head_text_detailed, .snail_shell_text_detailed {
-  font-size: 6px;
-}
 }
 
 @media only screen and (max-width: 600px) {
@@ -290,8 +282,7 @@
     width: auto;
   }
   .snailSVG {
-    width: 100mm;
-    height: auto;
+    height: 60mm;
   }
 }
 
@@ -300,11 +291,12 @@
 /******* Pencil SVG *******/
 
 .pencilSVG {
-  margin: 20px;
-  height: 150mm;
+  height: 140mm;
+  margin: 19px;
   width: auto;
   border: 1px solid var(--ob_font_color);
   border-radius: 50%;
+  box-sizing: border-box;
 }
 
 @media only screen and (max-width: 1280px) {
@@ -331,7 +323,6 @@
 
 .masSVG,.masNoColorSVG {
   height: 100mm;
-  width: 160mm;
 }
 
 .masNoColorSVG .addOpacity {
@@ -365,6 +356,24 @@
 .path_hoverable#path910:hover {
   opacity: 1;
 } 
+
+@media only screen and (max-width: 1280px) {
+  .masSVG,.masNoColorSVG {
+    height: 80mm;
+  }
+}
+
+@media only screen and (max-width: 780px) {
+  .masSVG,.masNoColorSVG {
+    height: 60mm;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .masSVG,.masNoColorSVG {
+    height: 40mm;
+  }
+}
 
 /******* MAS SVG *******/
 

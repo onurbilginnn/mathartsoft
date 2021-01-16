@@ -21,21 +21,18 @@
     font-size: 1.8rem;
     margin-bottom: 0;
 }
-
-.ServicesBtn{   
+.BtnContainer {
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.Btn{   
     background-color: var(--ob_main_logo_color) !important;
     border-color: var(--ob_main_logo_color) !important;
     color: var(--white) !important;
-    margin-right: 50px;
+    width: 100px;
 }
-
-.PluginsBtn{
-    background-color: transparent !important;
-    border-color: transparent !important;
-    color: var(--ob_main_logo_color)  !important;
-}
-
-.ServicesBtn:hover {
+.Btn:hover {
     background-color: var(--white) !important;
     border-color: var(--white) !important;
     color: var(--ob_main_logo_color)  !important;
@@ -47,9 +44,9 @@
 }
 
 .FeaturesContainer {
-    text-align: left;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .SnailSVGContainer {

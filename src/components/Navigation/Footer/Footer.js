@@ -19,15 +19,17 @@ const Footer = (props) => {
             <div className="linkContainers">
               <h6>Links</h6>
               <NavigationItem link="/" exact >Home</NavigationItem>
-              <NavigationItem link="/about">About</NavigationItem>
-              <NavigationItem link="/plugins">Plugins</NavigationItem>
               <NavigationItem link="/contact">Contact</NavigationItem>
+              <h6 className="mt-5">Math</h6>
+              <NavigationItem link="/math/prime" exact >Prime Numbers</NavigationItem>
+              <NavigationItem link="/math" exact >Math</NavigationItem>
             </div>
             <div className="linkContainers">
-              <h6>Services</h6>
-              <NavigationItem link="/finance">Finance</NavigationItem>
-              <NavigationItem link="/inventory">Inventory</NavigationItem>
-              <NavigationItem link="/services">All Services</NavigationItem>
+              <h6>Art</h6>
+              <NavigationItem link="/art/digital">Digital Drawings</NavigationItem>
+              <NavigationItem link="/art/hand">Hand Drawings</NavigationItem>
+              <NavigationItem link="/art/hand-to-digital">Hand to Digital</NavigationItem>
+              <NavigationItem link="/art">Art</NavigationItem>
             </div>
             <div className="companyContainer">
               <MainLogoSVG />

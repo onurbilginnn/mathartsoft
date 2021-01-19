@@ -50,6 +50,9 @@
 
 
 /******* Human Mind SVG *******/
+.humanMindSVG{
+  margin-bottom: 30px;
+}
 
 .planet_finance{
   -webkit-transition: fill .5s ease-in; /* Safari */

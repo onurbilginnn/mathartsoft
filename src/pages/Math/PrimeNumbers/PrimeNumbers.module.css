@@ -1,3 +1,16 @@
 .PrimeNumbersContainer {
-    height: 60vh;
+    min-height: 60vh;
+    margin: 100px 30px 30px 30px;
+}
+
+.TableContainer {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.TableBtnsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 10px 0 10px 0;
 }

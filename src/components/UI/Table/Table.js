@@ -2,22 +2,28 @@ import React from 'react';
 
 import TableCell from './TableCell/TableCell';
 
-import styles from './Table.module.css';
+import './table.css';
 
 const Table = props => {
 
-    const colHeaders = props.headers.map(header => <TableCell
-        keyprop={header + 'tableCellHeader'}
-        scope="col"
-        header>{header}</TableCell>);
+    let colHeaders;
+
+     if (props.headers) {
+         colHeaders = props.headers.map((header, i) => <TableCell
+             key={i + 'tableColHeader'}
+             scope="col"
+             header>{header}</TableCell>);
+     }
+
+
     const tableRows = props.rows.map((row, i) => {
         const rowTextArr = [];
         for (let txt in row.text) {
             rowTextArr.push(<TableCell
-                keyprop={row.text[txt] + 'tableCellKEy'}
+                key={i.toString()+ txt.toString() + 'tableCellKey'}
                 colspan={row.colspan}>{row.text[txt]}</TableCell>)
-        }
-        return (<tr key={row.headerText + 'trKey'}>
+        };
+        return (<tr key={i + 'trKey'}>
             {row.headerText && <TableCell
                 scope="row"
                 header>{row.headerText}</TableCell>}
@@ -25,11 +31,12 @@ const Table = props => {
         </tr>)
     });
 
+    console.log(props.classes);
 
     return (
-        <div className={styles.TableContainer} >
-            <table className="table table-bordered">
-                {colHeaders.length > 0 && <thead>
+        <div>
+            <table className={props.classes}>
+                {colHeaders && <thead>
                     <tr>
                         {colHeaders}
                     </tr>

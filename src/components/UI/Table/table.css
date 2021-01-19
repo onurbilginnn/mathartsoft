@@ -1,0 +1,5 @@
+
+    .borderless>tbody>tr>th,
+    .borderless>tbody>tr>td {
+        border-top: 0;
+    }

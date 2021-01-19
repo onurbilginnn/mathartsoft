@@ -1,16 +1,19 @@
 export const fillMatrixNormal = (matrixSize, tableRowData) => {
     const rows = [];
+    let cellColors = [];
     for(let i = 1; i <= matrixSize; i++) {
         for(let j = ((i-1)*matrixSize)+1; j <= matrixSize*i; j++){
            tableRowData.push(j);
+           cellColors.push('defaultCell');
         }
-        rows.push({text:tableRowData});
+        rows.push({text:tableRowData, colors: cellColors});
         tableRowData = [];
+        cellColors = [];
       }
       return rows;
 }
 
-export const fillMatrixSpiral = (matrixSize) => {
+export const fillMatrixSpiral = matrixSize => {
     const results = [];
   for (let i = 0; i < matrixSize; i++) {
       results.push([]);
@@ -48,8 +51,60 @@ export const fillMatrixSpiral = (matrixSize) => {
     }
 
     const resultsObj = results.map(array => {
-        return {text: array};
+      let colorsArr = [];
+      // eslint-disable-next-line no-unused-vars
+      for(let el in array) {
+        colorsArr.push('defaultCell');
+      }
+      return {text: array,colors: colorsArr};
     })
-
+    console.log(resultsObj);
   return resultsObj;
   }
+
+  export const isPrimeNumber = number => {
+      if(number === 1) {
+        return false;
+      }
+      if(number === 2 ) {
+        return true;
+      }
+
+      for(let i = 2; i <= (number / 2); i++) {
+        if(number % i === 0) {
+          return false;
+        }
+      }
+      
+      return true;
+  }
+
+  export const isEvenNumber = number => {
+    if(number === 1) {
+      return false;
+    }
+    if(number === 2 ) {
+      return true;
+    }
+      if(number % 2 === 0) {
+        return true;
+      }
+    
+    return false;
+}
+
+export const findEvenNumbersPrimeTotals = numberQty => {
+  const totals = ['2=1+1'];
+  for(let i = 3;i <= numberQty; i++) {
+    if(isEvenNumber(i)) {
+        for(let j = 2; j <= i/2; j++) {
+          if(isPrimeNumber(j)) {
+            if(isPrimeNumber(i-j)){
+              totals.push(i + '=' + j + '+' + (i-j));
+            }
+          }
+        }
+    }
+  }
+  console.log(totals);
+}

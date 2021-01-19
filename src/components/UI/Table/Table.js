@@ -21,7 +21,8 @@ const Table = props => {
         for (let txt in row.text) {
             rowTextArr.push(<TableCell
                 key={i.toString()+ txt.toString() + 'tableCellKey'}
-                colspan={row.colspan}>{row.text[txt]}</TableCell>)
+                colspan={row.colspan}
+                cellClass={row.colors && row.colors[txt]}>{row.text[txt]}</TableCell>)
         };
         return (<tr key={i + 'trKey'}>
             {row.headerText && <TableCell
@@ -31,11 +32,8 @@ const Table = props => {
         </tr>)
     });
 
-    console.log(props.classes);
-
     return (
-        <div>
-            <table className={props.classes}>
+            <table className={"table-fit " + props.classes}>
                 {colHeaders && <thead>
                     <tr>
                         {colHeaders}
@@ -45,7 +43,6 @@ const Table = props => {
                     {tableRows}
                 </tbody>
             </table>
-        </div>
     );
 }
 

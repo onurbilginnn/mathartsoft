@@ -1,0 +1,23 @@
+
+.primeNumberCell {
+    background-color: var(--ob_pink);
+    transition: .3S ease-in;
+
+}
+
+.evenNumberCell {
+    background-color: var(--ob_yellow);
+    transition: .3S ease-in;
+}
+
+.numberTwo {
+    background-color: var(--ob_lightGreen);
+    transition: .3S ease-in;
+
+}
+
+.defaultCell {
+    background-color: var(--ob_gray);
+    transition: .3S ease-in;
+
+}

@@ -6,11 +6,23 @@
 .TableContainer {
     display: flex;
     flex-wrap: wrap;
+    transition: opacity .3s ease-in;
+}
+
+.Hidden {
+    opacity: 0;
+    transition: opacity .3s ease-in;
 }
 
 .TableBtnsContainer {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content:space-between;
     padding: 10px 0 10px 0;
+    transition: opacity .3s ease-in;
+}
+.ColorBtnsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
 }

@@ -1,0 +1,30 @@
+.ConstructionContainer {
+    min-height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.SVGContainer {
+    height: 150mm;
+}
+
+@media only screen and (max-width: 1280px) {
+    .SVGContainer {
+        height: 120mm;
+    }
+  }
+
+  @media only screen and (max-width: 780px) {
+  
+    .SVGContainer {
+        height: 80mm;
+    }
+   
+  }
+
+  @media only screen and (max-width: 600px) {
+    .SVGContainer {
+        height: 50mm;
+    }
+  }

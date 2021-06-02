@@ -1,0 +1,7 @@
+.BodyContainer {
+    width: 90%;
+    text-align: center;
+    max-height: 70vh;
+    display: flex;
+    overflow-y: auto;
+}

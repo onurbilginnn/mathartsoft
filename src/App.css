@@ -28,4 +28,13 @@
   text-align: center;
 }
 
+.modal-90w { max-width: 90% !important; }
 
+.ob_link {
+  color: var(--ob_black)
+}
+
+.ob_link:hover {
+  color: var(--ob_brown);
+  text-decoration: none;
+}

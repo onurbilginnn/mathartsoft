@@ -13,6 +13,10 @@ const Art = React.lazy(() => {
   return import('./pages/Art/Art');
 });
 
+const Math = React.lazy(() => {
+  return import('./pages/Math/Math');
+});
+
 const DigitalDrawings = React.lazy(() => {
   return import('./pages/Art/DigitalDrawings/DigitalDrawings');
 });
@@ -23,15 +27,21 @@ const PrimeNumbers = React.lazy(() => {
 
 const Contact = React.lazy(() => {
   return import('./pages/Contact/Contact');
+});
+
+const UnderConstruction = React.lazy(() => {
+  return import('./pages/Other/UnderConstruction');
 })
 
 const App = () => {
 
   let routes = (
     <Switch>
+       <Route path="/under_construction" render={(props) => <UnderConstruction {...props}/>} />
        <Route path="/contact" render={(props) => <Contact {...props}/>} />
        <Route path="/art/digital" render={(props) => <DigitalDrawings {...props}/>} />
        <Route path="/math/prime" render={(props) => <PrimeNumbers {...props}/>} />
+       <Route path="/math" render={(props) => <Math {...props}/>} />
        <Route path="/art" render={(props) => <Art {...props}/>} />
         <Route path="/" exact component={Home} />
         <Redirect to="/" />

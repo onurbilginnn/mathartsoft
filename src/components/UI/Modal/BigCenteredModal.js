@@ -2,21 +2,21 @@ import React from 'react';
 
 import { Modal, Button } from 'react-bootstrap';
 
+import styles from './BigCenteredModal.module.css';
+
 const BigCenteredModal = props => {
     return (
         <Modal
-        {...props}
-        size="lg"
-        aria-labelledby="contained-modal-title-vcenter"
-        centered
+        {...props}       
+        aria-labelledby="example-custom-modal-styling-title"
       >
         <Modal.Header closeButton>
-          <Modal.Title id="contained-modal-title-vcenter">
+          <Modal.Body  id="example-custom-modal-styling-title">
             {props.title}
-          </Modal.Title>
+          </Modal.Body>
         </Modal.Header>
         <Modal.Body>
-          <div style={{textAlign: "center"}}>
+          <div className={styles.BodyContainer} >
           {props.body}
           </div>
           <div>{props.dropzone}</div>

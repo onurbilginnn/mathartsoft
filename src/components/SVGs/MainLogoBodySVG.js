@@ -3,7 +3,7 @@ import React from 'react'
 import './svg.css';
 
 export const MainLogoSVG = props => (
-  <svg className="mainLogoSVG" height={!props.height && "15mm"}  version="1.1" viewBox="0 0 200 140">
+  <svg height={!props.height && "40mm"} version="1.1" viewBox="0 0 200 140">
   	<defs id="defs125">
 	  <style>
 		@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');

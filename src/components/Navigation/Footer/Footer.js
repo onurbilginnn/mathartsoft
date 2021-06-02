@@ -27,15 +27,19 @@ const Footer = (props) => {
             <div className="linkContainers">
               <h6>Art</h6>
               <NavigationItem link="/art/digital">Digital Drawings</NavigationItem>
-              <NavigationItem link="/art/hand">Hand Drawings</NavigationItem>
-              <NavigationItem link="/art/hand-to-digital">Hand to Digital</NavigationItem>
+              {/* <NavigationItem link="/art/hand">Hand Drawings</NavigationItem> */}
+              <NavigationItem link="/under_construction">Hand Drawings</NavigationItem>
+
+              {/* <NavigationItem link="/art/hand-to-digital">Hand to Digital</NavigationItem> */}
+              <NavigationItem link="/under_construction">Hand to Digital</NavigationItem>
+
               <NavigationItem link="/art">Art</NavigationItem>
             </div>
             <div className="companyContainer">
               <MainLogoSVG />
               <p className="brandText mb-5">Copyright &copy; {date.getFullYear()} MathArtSoft</p>
               <a href="https://obsolutions.co/" target="_blank" rel="noreferrer">
-              <img src={obSolutionsLogo} className="obSolutionsLogo" alt="OB Solutions Logo" />
+                <img src={obSolutionsLogo} className="obSolutionsLogo" alt="OB Solutions Logo" />
               </a>
               <p className="brandText">Powered by OB Solutions</p>
             </div>

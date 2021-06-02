@@ -1,3 +1,5 @@
+import React from 'react';
+
 export const fillMatrixNormal = (matrixSize, tableRowData) => {
     const rows = [];
     let cellColors = [];
@@ -58,7 +60,6 @@ export const fillMatrixSpiral = matrixSize => {
       }
       return {text: array,colors: colorsArr};
     })
-    console.log(resultsObj);
   return resultsObj;
   }
 
@@ -94,17 +95,34 @@ export const fillMatrixSpiral = matrixSize => {
 }
 
 export const findEvenNumbersPrimeTotals = numberQty => {
-  const totals = ['2=1+1'];
+  const evensArr = [2];
+  const firstPrime = [1];
+  const secPrime = [1];
   for(let i = 3;i <= numberQty; i++) {
     if(isEvenNumber(i)) {
         for(let j = 2; j <= i/2; j++) {
           if(isPrimeNumber(j)) {
-            if(isPrimeNumber(i-j)){
-              totals.push(i + '=' + j + '+' + (i-j));
+            if(isPrimeNumber(i-j)){        
+              evensArr.push(i);
+              firstPrime.push(j);
+              secPrime.push(i-j);             
             }
           }
         }
-    }
+    }   
   }
-  console.log(totals);
+  const counts = {};
+  evensArr.forEach((x) => { counts[x] = (counts[x] || 0)+1; });
+
+  const result = {};
+ for(let i=0; i < evensArr.length; i++){
+    result[counts[evensArr[i]]] = [];
+ }
+
+ for(let i=0; i < evensArr.length; i++){
+  result[counts[evensArr[i]]].push(<p><b>{evensArr[i]}</b>={firstPrime[i]}+{secPrime[i]}</p>);
+}
+
+return result;
+
 }

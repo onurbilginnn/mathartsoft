@@ -1,13 +1,15 @@
 import React, { useState } from 'react';
 import { InputGroup, FormControl, Button } from 'react-bootstrap';
 
+import Modal from '../../../components/UI/Modal/BigCenteredModal';
 import OnOffBtn from '../../../components/UI/OnOffBtn/OnOffBtn';
 import Table from '../../../components/UI/Table/Table';
 import { fillMatrixNormal,
     fillMatrixSpiral,
      isPrimeNumber,
      isEvenNumber,
-   findEvenNumbersPrimeTotals } from '../../../utility/math/math';
+   findEvenNumbersPrimeTotals
+    } from '../../../utility/math/math';
 
 import styles from './PrimeNumbers.module.css';
 
@@ -22,6 +24,8 @@ const PrimeNumbers = props => {
          evens: false,
          odds: false
    }});
+   const [showModal, setShowModal] = useState(false);
+   const [evenPrimeTotals, setEvenPrimeTotals] = useState();
 
    const resetAllBtns = () => {
       setOnOffBtns({spiral: false,
@@ -44,6 +48,22 @@ const PrimeNumbers = props => {
       resetAllBtns();
          rows = fillMatrixNormal(matrixSize, tableRowData, []);
       setTableRows(rows);
+
+      const primeTotalsObj = findEvenNumbersPrimeTotals(matrixSize * matrixSize);
+
+      const primeTotalsJSX = [];
+      for(let el in primeTotalsObj) {
+         const arr = [];
+         for(let div in primeTotalsObj[el]) {
+            arr.push(primeTotalsObj[el][div]);
+         }  
+         primeTotalsJSX.push(<div className="m-4">
+               <label>{el} diff prime totals</label>
+               <div className="mr-3">{arr}</div>
+            </div>)
+      }
+      setEvenPrimeTotals(primeTotalsJSX);
+
    }
 
    const spiralToggleHandler = checked => {
@@ -152,10 +172,16 @@ const PrimeNumbers = props => {
       setMatrixSize('');
    }
 
-  findEvenNumbersPrimeTotals(30);
+  
 
    return (
       <div className={styles.PrimeNumbersContainer + " " + { ...props.classes }} >
+         <Modal
+          show={showModal}
+           onHide={() => {setShowModal(false)}}
+              body={evenPrimeTotals}
+              dialogClassName="modal-90w"
+           />
          <InputGroup className="mb-3 col-md-3">
 
             <FormControl
@@ -171,7 +197,7 @@ const PrimeNumbers = props => {
             </InputGroup.Append>
          </InputGroup>
          <div className={tableRows.length > 0 ? styles.TableBtnsContainer: styles.TableBtnsContainer + " " + styles.Hidden + " m-3" }>
-         <Button size="xs" variant="outline-dark" >Show Totals</Button>
+         <Button onClick={() => {setShowModal(true)}} size="xs" variant="outline-dark" >Show Totals</Button>
                <OnOffBtn
                   isOn={onOffBtns.spiral}
                   label="Spiral Numbers:"

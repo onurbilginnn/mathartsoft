@@ -17,7 +17,7 @@ const TopNavBar = (props) => {
   return (
     <div>
       <Navbar bg="light" expand="lg" fixed="top">
-  <Navbar.Brand href="#home" className="ml-5">
+  <Navbar.Brand className="ml-5">
   <MainLogoColorSVG />
   </Navbar.Brand>
   <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -31,8 +31,10 @@ const TopNavBar = (props) => {
       </NavDropdown>
       <NavDropdown className="mr-3" title="Art" id="basic-nav-dropdown">
         <NavigationItem classes="ml-4" link="/art/digital">Digital Drawings</NavigationItem>
-        <NavigationItem classes="ml-4" link="/art/hand">Hand Drawings</NavigationItem>
-        <NavigationItem classes="ml-4"  link="/art/hand-to-digital">Hand to Digital</NavigationItem>
+        {/* <NavigationItem classes="ml-4" link="/art/hand">Hand Drawings</NavigationItem> */}
+        <NavigationItem classes="ml-4" link="/under_construction">Hand Drawings</NavigationItem>
+        {/* <NavigationItem classes="ml-4"  link="/art/hand-to-digital">Hand to Digital</NavigationItem> */}
+        <NavigationItem classes="ml-4" link="/under_construction">Hand to Digital</NavigationItem>
         <NavDropdown.Divider />
         <NavigationItem classes="ml-4"  link="/art">Art</NavigationItem>
       </NavDropdown>

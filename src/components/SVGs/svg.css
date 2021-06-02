@@ -371,12 +371,6 @@
   }
 }
 
-@media only screen and (max-width: 600px) {
-  .masSVG,.masNoColorSVG {
-    height: 40mm;
-  }
-}
-
 /******* MAS SVG *******/
 
 

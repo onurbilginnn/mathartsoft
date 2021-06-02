@@ -3,7 +3,7 @@ import React from 'react'
 import './svg.css';
 
 export const MainLogoSVG = props => (
-  <svg className="mainLogoSVG"  version="1.1" viewBox="0 0 200 140">
+  <svg className="mainLogoSVG" height={props.height}  version="1.1" viewBox="0 0 200 140">
   	<defs id="defs125">
 	  <style>
 		@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
@@ -25,13 +25,13 @@ export const MainLogoSVG = props => (
   			<path id="path1022" style={{"fill":"none","strokeLinecap":"butt","strokeLinejoin":"miter","strokeMiterlimit":"4","strokeDasharray":"none","strokeOpacity":"1"}} d="m 171.18343,73.779893 c 2.37115,0.478206 4.51953,1.972733 5.7925,4.029569 1.33179,2.151882 1.68688,4.76474 2.77034,7.051745 1.62351,3.426968 4.95904,5.989041 8.68875,6.673974"/>
   			<path id="path1026" style={{"fill":"none","strokeLinecap":"butt","strokeLinejoin":"miter","strokeMiterlimit":"4","strokeDasharray":"none","strokeOpacity":"1"}} d="m 82.735666,172.38408 c -9.126713,4.85932 -19.536662,7.28176 -29.871097,6.95114 -6.022009,-0.19266 -12.100271,-1.29513 -18.026381,-0.2075 -7.781223,1.4281 -14.724325,6.83048 -18.021032,14.02204"/>
   			<path id="path1048" style={{"fill":"none","strokeLinecap":"butt","strokeLinejoin":"miter","strokeMiterlimit":"4","strokeDasharray":"none","strokeOpacity":"1"}} d="m 140.99677,181.61182 c -3.4461,4.55707 -8.06593,8.21881 -13.28944,10.53342 -5.22351,2.3146 -11.03942,3.27707 -16.73011,2.76864 -6.64047,-0.59329 -12.982734,-3.13148 -19.61449,-3.81535 -11.385928,-1.17413 -22.65578,3.17272 -34.102043,3.2043 -9.936726,0.0274 -19.688176,-3.19865 -29.62253,-2.97984 -6.072902,0.13376 -12.113696,1.57668 -17.591473,4.20194"/>
-  			<text id="text1052" style={{"fontSize":"14.73129999999999917px","lineHeight":"1.25","fontFamily":"sans-serif","textAlign":"start","whiteSpace":"pre","shapeInside":"url(#rect1054)","strokeWidth":"0.864519","strokeMiterlimit":"4","strokeDasharray":"none"}} transform="matrix(1.0466283,0,0,1.2625737,-4.0092836,-24.78346)" x="-5.0763493" y="0" xmlSpace="preserve">
+  			{/* <text id="text1052" style={{"fontSize":"14.73129999999999917px","lineHeight":"1.25","fontFamily":"sans-serif","textAlign":"start","whiteSpace":"pre","shapeInside":"url(#rect1054)","strokeWidth":"0.864519","strokeMiterlimit":"4","strokeDasharray":"none"}} transform="matrix(1.0466283,0,0,1.2625737,-4.0092836,-24.78346)" x="-5.0763493" y="0" xmlSpace="preserve">
   				<tspan x="48.3" y="133.12145">
   					<tspan 
 					  style={{"fontStyle":"normal","fontVariant":"normal","fontWeight":"normal","fontStretch":"normal","fontSize":"10px","fontFamily":"Courgette","InkscapeFontSpecification":"Courgette","shapeInside":"url(#rect1054)"}}
 					  >M        A        S</tspan>
   				</tspan>
-  			</text>
+  			</text> */}
   		</g>
   	</g>
   </svg>

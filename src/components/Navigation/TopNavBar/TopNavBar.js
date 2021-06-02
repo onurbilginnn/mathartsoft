@@ -17,8 +17,8 @@ const TopNavBar = (props) => {
   return (
     <div>
       <Navbar bg="light" expand="lg" fixed="top">
-  <Navbar.Brand className="ml-5">
-  <MainLogoColorSVG />
+  <Navbar.Brand >
+  <MainLogoColorSVG height="15mm" />
   </Navbar.Brand>
   <Navbar.Toggle aria-controls="basic-navbar-nav" />
   <Navbar.Collapse id="basic-navbar-nav">

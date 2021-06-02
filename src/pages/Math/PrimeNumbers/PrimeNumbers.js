@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { InputGroup, FormControl, Button } from 'react-bootstrap';
 
 import Modal from '../../../components/UI/Modal/BigCenteredModal';
+import AlertModal from '../../../components/UI/Modal/AlertModal';
 import OnOffBtn from '../../../components/UI/OnOffBtn/OnOffBtn';
 import Table from '../../../components/UI/Table/Table';
 import { fillMatrixNormal,
@@ -14,6 +15,7 @@ import { fillMatrixNormal,
 import styles from './PrimeNumbers.module.css';
 
 const PrimeNumbers = props => {
+   const maxMatrixSize = 50;
    const [matrixSize, setMatrixSize] = useState('');
    const [tableRows, setTableRows] = useState([]);
    const [tableStyle, setTableStyle] = useState('table table-bordered');
@@ -25,6 +27,7 @@ const PrimeNumbers = props => {
          odds: false
    }});
    const [showModal, setShowModal] = useState(false);
+   const [showAlertModal, setShowAlertModal] = useState(false);
    const [evenPrimeTotals, setEvenPrimeTotals] = useState();
 
    const resetAllBtns = () => {
@@ -38,7 +41,11 @@ const PrimeNumbers = props => {
    }
 
    const matrixSizeHandler = event => {
-      setMatrixSize(event.target.value);
+      if(event.target.value <= maxMatrixSize) {
+         setMatrixSize(event.target.value);
+      } else {
+         setShowAlertModal(true);
+      }
    };
 
    let rows = [];
@@ -182,6 +189,11 @@ const PrimeNumbers = props => {
               body={evenPrimeTotals}
               dialogClassName="modal-90w"
            />
+           <AlertModal
+           alertTitle="Matrix Size Alert"
+           alertBody={"Max matrix size could be " + maxMatrixSize}
+            onCloseAlertModal={() => setShowAlertModal(false)}
+             show={showAlertModal} />
          <InputGroup className="mb-3 col-md-3">
 
             <FormControl

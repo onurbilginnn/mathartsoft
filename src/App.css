@@ -38,3 +38,7 @@
   color: var(--ob_brown);
   text-decoration: none;
 }
+
+.navbar-text, .nav-item{
+  padding-right:  15px;
+}

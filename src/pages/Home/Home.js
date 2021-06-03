@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Button } from 'react-bootstrap';
+import { Button,ButtonGroup,Card } from 'react-bootstrap';
 
 import PianoSVG from '../../components/SVGs/PianoSVG/PianoSVG';
 
@@ -11,24 +11,21 @@ const Home = props => {
         props.history.push('/' + page);
     }
     return (
-        <div className={styles.HomeContainer} >
-            <div className={styles.WelcomeContainer}>
-                <div className={styles.TextContainer} >
-                    <p className={styles.WelcomeText}>The Dance of Mathematics and Art Intertwined with Software</p>
-                    <h1 className={styles.TitleText}>MathArtSoft</h1>
-                </div>
-                <div className={styles.BtnContainer}>
-                    <Button onClick={() => goTo('math')} className={styles.Btn}>Math</Button>
-                    <Button onClick={() => goTo('art')} className={styles.Btn}>Art</Button>
-                </div>
-            </div>
-            <div className={styles.FeaturesContainer}>
-                <div className={styles.SnailSVGContainer} >
+        <Card >
+            <Card.Body className={styles.WelcomeContainer}>
+        <h1 className="invisible">A</h1>
+        <h1 className="invisible">A</h1>
+                    <Card.Text className={styles.WelcomeText}>The Dance of Mathematics and Art Intertwined with Software</Card.Text>
+                    <h1 className={styles.TitleText}>MathArtSoft</h1>  
+                    <ButtonGroup>
+                    <Button onClick={() => goTo('math')} className={styles.Btn + " mr-2"}>Math</Button>
+                    <Button onClick={() => goTo('art')}  className={styles.Btn + " ml-2"}>Art</Button>           
+                    </ButtonGroup>
+            </Card.Body>
+            <Card.Body className={styles.FeaturesContainer}>
                 <PianoSVG />
-                </div>
-
-            </div>
-        </div>
+            </Card.Body>
+        </Card>
     );
 }
 

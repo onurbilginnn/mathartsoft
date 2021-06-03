@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
+import { Container, Row } from 'react-bootstrap';
 import OnOffBtn from '../../UI/OnOffBtn/OnOffBtn';
 
 import MasNoColorSVG from '../MasNoColorSVG';
 import MasSVG from '../MasSVG';
-
-import styles from './PianoSVG.module.css';
 
 export const PianoSVG = () => {
     const [isPianoModeOn, setIsPianoModeOn] = useState(false);
@@ -13,16 +12,18 @@ export const PianoSVG = () => {
       setIsPianoModeOn(checked);
     }
 
- return (<div className={styles.PianoSVGContainer}>
+ return (<Container >
+ <Row className="justify-content-center">
     <OnOffBtn 
         label = "Piano Mode:"
         isOn = {isPianoModeOn}
         onChanged = {pianoModeOnHandler}
     />
- <div className={styles.SVGContainer}>
+ </Row>
+ <Row className="mt-3 mb-3 justify-content-center border border-dark rounded">
     {isPianoModeOn ?  <MasNoColorSVG /> : <MasSVG />}
- </div>
- </div>)
+ </Row>
+ </Container>)
 };
 
 export default PianoSVG;

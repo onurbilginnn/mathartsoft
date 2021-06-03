@@ -1,7 +1,7 @@
 import React from 'react'
 
 export const MasSVG = () => (
-  <svg className="masSVG" version="1.1" viewBox="0 0 160 100">
+  <svg className="masSVG" version="1.1" viewBox="0 0 170 100">
   	<defs id="defs2">
   		<rect height="121.24339" id="rect897" width="72.239929" x="8.9580231" y="10.507742"/>
   	</defs>

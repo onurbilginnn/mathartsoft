@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Carousel from 'react-bootstrap/Carousel';
+import {  Container } from 'react-bootstrap';
 
 import SnailSVG from '../../../components/SVGs/SnailSVG';
 import FlowersSVG from '../../../components/SVGs/FlowersSVG';
@@ -19,7 +20,9 @@ const DigitalDrawings = props => {
 
 
     return (
-        <div className="digital-drawings-container" >
+        <Container className="mb-4 p-2 " >
+        <h1 className="invisible">A</h1>
+        <h1 className="invisible">A</h1>
             <Carousel hover="hover" prevIcon={<span aria-hidden="true"
                 style={arrowStyles}
                 className="carousel-control-prev-icon" />}
@@ -40,7 +43,9 @@ const DigitalDrawings = props => {
                 
                 </Carousel.Item>
             </Carousel>
-        </div>
+        <h1 className="invisible">A</h1>
+        <h1 className="invisible">A</h1>
+        </Container>
     );
 }
 

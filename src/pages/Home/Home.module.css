@@ -1,11 +1,6 @@
 .WelcomeContainer {
     background-color: var(--ob_skin);
-    height: 400px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    flex-wrap: wrap;
+    min-height: 400px;
     background-image: url(../../assets/SVGs/mainLogo.svg);
     background-repeat: no-repeat;
     background-size: 50%;
@@ -21,11 +16,6 @@
     font-size: 1.8rem;
     margin-bottom: 0;
 }
-.BtnContainer {
-    width: 50%;
-    display: flex;
-    justify-content: space-evenly;
-}
 .Btn{   
     background-color: var(--ob_main_logo_color) !important;
     border-color: var(--ob_main_logo_color) !important;
@@ -39,35 +29,6 @@
 
 }
 
-.PluginsBtn:hover {
-    color: var(--white)  !important;
-}
-
-.FeaturesContainer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.SnailSVGContainer {
-    display: flex;
-    flex-direction: column;
-}
-
-.SnailSVGTextContainerHidden {
-    margin: auto 0 auto 0;
-    font-size: 0;
-    -webkit-transition: font-size .5s ease-in; /* Safari */
-    transition: font-size .5s ease-in;
-}
-
-
-.SnailSVGTextContainerVisible {
-    margin: auto 0 auto 0;
-    font-size: normal;
-    -webkit-transition: font-size .5s ease-in; /* Safari */
-    transition: font-size .5s ease-in;
-}
 
 @media only screen and (max-width: 1280px) {
     .WelcomeContainer {
@@ -80,10 +41,7 @@
     .WelcomeText {
         color: var(--ob_font_color);
         font-size: 1.4rem;
-    }
-    .SnailSVGContainer {
-      margin: auto;
-    }
+    }  
   }
 
   @media only screen and (max-width: 780px) {

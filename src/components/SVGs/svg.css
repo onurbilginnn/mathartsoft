@@ -49,9 +49,7 @@
 
 
 /******* Human Mind SVG *******/
-.humanMindSVG{
-  margin-bottom: 30px;
-}
+
 
 .planet_finance{
   -webkit-transition: fill .5s ease-in; /* Safari */
@@ -140,6 +138,21 @@
   -webkit-transition: fill 1s ease-in; /* Safari */
   transition: fill 1s ease-in;
   fill: var(--ob_black);
+}
+
+@media only screen and (max-width: 780px) {
+  .masSVG,.masNoColorSVG {
+    height: 60mm;
+  }
+  .humanMindSVG {
+    height: 140mm;
+  }
+}
+
+@media only screen and (max-width: 780px) { 
+  .humanMindSVG {
+    height: 100mm;
+  }
 }
 
 /******* Human Mind SVG *******/
@@ -368,6 +381,18 @@
 @media only screen and (max-width: 780px) {
   .masSVG,.masNoColorSVG {
     height: 60mm;
+  }
+  .humanMindSVG {
+    height: 120mm;
+  }
+}
+
+@media only screen and (max-width: 780px) {
+  .masSVG,.masNoColorSVG {
+    height: 40mm;
+  }
+  .humanMindSVG {
+    height: 100mm;
   }
 }
 

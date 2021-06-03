@@ -1,39 +1,31 @@
-.MathContainer {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    margin: 30px;
-    min-height: 600px;
-}
-.OperationContainer{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    font-size: 5rem;
-    width: 50%;
+.OperationContainer{   
     margin: 20px;
     border-radius: 20px;
     padding: 30px;
     background-color: var(--ob_white);
 }
 .SumContainer{
+    font-size: 5rem;    
     color: var(--ob_green);
 }
 .MinusContainer{
     color: var(--ob_orange);
+    font-size: 5rem;    
 }
 .MultiplyContainer{
     color: var(--ob_brown);
+    font-size: 5rem;    
 }
 .DivideContainer{
+    font-size: 5rem;  
     color: var(--ob_lightBlue);
 }
 
 .Link{
     color: var(--ob_black);
     cursor: pointer;
-
 }
+
 .Link:hover{    
     color: var(--ob_brown);
     text-decoration: none;

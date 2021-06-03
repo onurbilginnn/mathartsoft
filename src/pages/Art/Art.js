@@ -1,15 +1,16 @@
 import React from 'react';
+import { Container, Row } from 'react-bootstrap';
 
 import HumanMindSVG from '../../components/SVGs/HumanMindSVG';
 
-import styles from './Art.module.css';
-
-const Art = props => {
+const Art = () => {
  
     return (
-        <div className={styles.ArtContainer} >
+        <Container>
+        <Row className="mb-4 justify-content-md-center">
             <HumanMindSVG />
-        </div>
+        </Row>
+        </Container>
     );
 }
 

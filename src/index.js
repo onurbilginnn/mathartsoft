@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter } from 'react-router-dom';
+import { HashRouter } from 'react-router-dom';
 // import { Provider } from 'react-redux';
 // import { createStore, applyMiddleware, compose, combineReducers } from 'redux';
 // import thunk from 'redux-thunk';
@@ -11,9 +11,9 @@ import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.css';
 
 ReactDOM.render(
-  <BrowserRouter>
+  <HashRouter basename="/" >
     <App />
-  </BrowserRouter>,
+  </HashRouter>,
   document.getElementById('root')
 );
 

@@ -23,28 +23,29 @@ const TopNavBar = (props) => {
   <Navbar.Toggle aria-controls="basic-navbar-nav" />
   <Navbar.Collapse id="basic-navbar-nav">
     <Nav >
-      <Navbar.Text><NavigationItem link="/" exact >Home</NavigationItem></Navbar.Text>
+      <Navbar.Text  ><NavigationItem link="/" exact >Home</NavigationItem></Navbar.Text>
       <NavDropdown style={{textAlign:'center'}} title="Math" id="basic-nav-dropdown">
-      <Navbar.Text><NavigationItem  link="/math/prime">Prime Numbers</NavigationItem></Navbar.Text> 
+      <Navbar.Text className="ml-3">
+      <NavigationItem  link="/math/prime">Prime Numbers</NavigationItem></Navbar.Text> 
         <NavDropdown.Divider />
-        <Navbar.Text >
+        <Navbar.Text className="ml-3">
         <NavigationItem  link="/math">Math</NavigationItem>
         </Navbar.Text>
       </NavDropdown>
       <NavDropdown style={{alignItems: 'center'}} title="Art" id="basic-nav-dropdown">
-      <Navbar.Text >
+      <Navbar.Text className="ml-3" >
         <NavigationItem  link="/art/digital">Digital Drawings</NavigationItem>
       </Navbar.Text>
         {/* <NavigationItem classes="ml-4" link="/art/hand">Hand Drawings</NavigationItem> */}
-        <Navbar.Text>
+        <Navbar.Text className="ml-3">
         <NavigationItem  link="/under_construction">Hand Drawings</NavigationItem>
         </Navbar.Text>
         {/* <NavigationItem classes="ml-4"  link="/art/hand-to-digital">Hand to Digital</NavigationItem> */}
-        <Navbar.Text>
+        <Navbar.Text className="ml-3">
         <NavigationItem  link="/under_construction">Hand to Digital</NavigationItem>
         </Navbar.Text>
         <NavDropdown.Divider />
-        <Navbar.Text>
+        <Navbar.Text className="ml-3">
         <NavigationItem   link="/art">Art</NavigationItem>
         </Navbar.Text>
       </NavDropdown>

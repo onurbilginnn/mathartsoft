@@ -140,10 +140,34 @@
   fill: var(--ob_black);
 }
 
-@media only screen and (max-width: 780px) {
-  .masSVG,.masNoColorSVG {
-    height: 60mm;
+@media only screen and (max-width: 1280px) {
+  .human_body  {   
+    fill:var(--ob_skin);
   }
+  .human_body .body_logo  {
+    fill: var(--ob_black);
+  }
+  .planet_art {
+    fill: var(--ob_pink);
+  }
+  .planet_art ~ .art_text  {
+    opacity: 1; 
+  }
+  .planet_inventory {
+    fill: var(--ob_green); 
+  }
+  .planet_inventory ~ .inventory_text  {
+    opacity: 1; 
+  }
+  .planet_finance{
+    fill: var(--ob_blue);  
+  }
+  .planet_finance ~ .finance_text  {
+    opacity: 1; 
+  }
+}
+
+@media only screen and (max-width: 780px) { 
   .humanMindSVG {
     height: 140mm;
   }
@@ -379,9 +403,6 @@
 }
 
 @media only screen and (max-width: 780px) {
-  .masSVG,.masNoColorSVG {
-    height: 60mm;
-  }
   .humanMindSVG {
     height: 120mm;
   }
@@ -390,9 +411,6 @@
 @media only screen and (max-width: 780px) {
   .masSVG,.masNoColorSVG {
     height: 40mm;
-  }
-  .humanMindSVG {
-    height: 100mm;
   }
 }
 

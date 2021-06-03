@@ -62,7 +62,7 @@ export const MasNoColorSVG = () => {
 	return (
 	  <svg className="hoverable masNoColorSVG"
 	  onMouseOver={isMouseOverHandler} onMouseLeave={isMouseOutHandler}
-	   version="1.1" viewBox="0 0 160 100">
+	   version="1.1" viewBox="0 0 170 100">
 		  <defs id="defs2">
 			  <rect height="121.24339" id="rect897" width="72.239929" x="8.9580231" y="10.507742"/>
 		  </defs>

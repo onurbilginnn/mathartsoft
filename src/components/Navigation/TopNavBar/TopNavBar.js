@@ -7,7 +7,7 @@ import {
 
 import NavigationItem from '../NavigationItem/NavigationItem';
 
-import MainLogoColorSVG from '../../SVGs/MainLogoColorSVG';
+import MainLogoSVG from '../../SVGs/MainLogoSVG';
 
 import './topNavBar.css';
 
@@ -18,7 +18,7 @@ const TopNavBar = (props) => {
     <div>
       <Navbar bg="light" expand="lg" fixed="top">
   <Navbar.Brand >
-  <MainLogoColorSVG height="15mm" />
+  <MainLogoSVG />
   </Navbar.Brand>
   <Navbar.Toggle aria-controls="basic-navbar-nav" />
   <Navbar.Collapse id="basic-navbar-nav">

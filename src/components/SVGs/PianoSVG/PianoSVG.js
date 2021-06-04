@@ -18,6 +18,7 @@ export const PianoSVG = () => {
         label = "Piano Mode:"
         isOn = {isPianoModeOn}
         onChanged = {pianoModeOnHandler}
+        size="sm"
     />
  </Row>
  <Row className="mt-3 mb-3 justify-content-center border border-dark rounded">
